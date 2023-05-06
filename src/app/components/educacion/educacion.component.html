@@ -1,46 +1,31 @@
 <div class="row">
-    <h1>
-        Educacion 
-    </h1>
-    <div class="col-lg-1"></div>
-    <div class="col-lg-11">
-     <ul>
-        <li><h1>Argentina Programa Segunda etapa</h1> - <h3>(Octrubre 2022 - Mayo 2023)</h3></li>
-        <p>
-         Curso para la preparacion academica de desarollo fullstack Jr
-        </p>
-     </ul>
-     <ul>
-        <li><h1>Google Activate</h1> - <h3>(Octrubre 2022 - Novie mbre 2022)</h3></li>
-        <p>Curso de intruduccion al desarrollo web</p>
-     </ul>
-     <ul>
-        <li><h1>One Oracle Next Education + Alura Latam</h1> - <h3>(Noviembre 2022 - Mayo 2023)</h3></li>
-        <p>Curso dirigido para la formacion al desarrollo frontend/backend</p>
-     </ul>
-     <ul>
-        <li><h1>Argentina Programa Primera Etapa</h1> - <h3>(Julio 2022 - Agosto 2022)</h3></li>
-        <p>Curso introductorio a la programacion, logica de programacion y lenguajes de programacion</p>
-     </ul>
-     <ul>
-        <li><h1>EducacionIT</h1> - <h3>(Julio 2022 - Agosto 2022)</h3></li>
-        <p>Curso intructorio a base de datos y SQL</p>
-     </ul>
-     <ul>
-        <li><h1>EducacionIT</h1> - <h3>(Julio 2022 - Agosto 2022)</h3></li>
-        <p>Curso sobre Analisis y Diseños De Casos De Pruebas</p>
-     </ul>
-     <ul>
-        <li><h1>SCRUMStudy targeting success</h1> - <h3>(Junio 2022 - Julio 2022)</h3></li>
-        <p>Curso para el aprendizaje sobre marco de trabajo agil</p>
-     </ul>
-     <ul>
-        <li><h1>EducacionIT</h1> - <h3>(Mayo 2022 - Junio 2022)</h3></li>
-        <p>Curso sobre aprendizaje de software testerQA manual</p>
-     </ul>
-     <ul>
-        <li><h1>Universidad Pedagogica Experimental Libertador (UPEL-IPB)</h1> - <h3>(Marzo 2007 - Julio 2012)</h3></li>
-        <p>Formacion academica a nivel universitario sobre pedagogia en el area de musica, titulado como Profesor Mencion Eduacion Musical</p>
-     </ul>
-    </div>
+   <h1>Educacion</h1>
+   <div class="col-lg-2">
+       <button type="button" class="btn btn-dark" routerLink="/nuevaedu" *ngIf="isLogged">
+           Agregar Educacion
+       </button>
+   </div>
+
+   <div class="col lg 1"></div>
+   <div class="col-lg-11">
+       <table class="table">
+           <tbody>
+               <tr *ngFor="let Educacion of educacion">
+                   <td>
+                       <h2>{{Educacion.nombreE}}</h2>
+                   </td>
+                   <td>{{Educacion.descripcionE}}</td>
+                   <td *ngIf="isLogged">
+                       <button class="btn btn-light" routerLink="/editedu/{{Educacion.id}}">
+                           <i class="bi bi-pencil-fill"></i> EDITAR</button>
+                   </td>
+                   <td *ngIf="isLogged">
+                       <button class="btn btn-danger" (click)="delete(Educacion.id)">
+                           <i class="bi bi-trash-fill"></i> BORRAR</button>
+                   </td>
+               </tr>
+           </tbody>
+       </table>
+   </div>
+
 </div>

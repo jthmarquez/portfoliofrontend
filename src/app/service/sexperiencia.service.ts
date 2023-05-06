@@ -9,7 +9,7 @@ import { Experiencia } from '../model/experiencia';
 })
 export class SExperienciaService {
 <<<<<<< HEAD
-  expURL = 'https://backend-mgb.herokuapp.com/explab/';
+  expURL = 'https://https://PortfolioYoProgramo.web.app/explab/';
 =======
   URL = environment.URL + 'explab/';
 >>>>>>> dbccedd5c18384aa757cbb7ab7d9f7f3bc0e7672
