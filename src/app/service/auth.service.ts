@@ -14,7 +14,6 @@ export class AuthService {
   authURL = 'https://localhost:8080/auth/';
 =======
   URL = environment.URL + 'auth/';
->>>>>>> dbccedd5c18384aa757cbb7ab7d9f7f3bc0e7672
 
   constructor(private httpClient: HttpClient) { }
 
