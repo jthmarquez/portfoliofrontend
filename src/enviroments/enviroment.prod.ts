@@ -1,5 +1,5 @@
-export const environment = {
+export const enviroment = {
     production: true,
-    URL:
+    URL:"https://jthmarquez-backendportfolio.onrender.com/"
   };
   
