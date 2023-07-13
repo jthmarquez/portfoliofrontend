@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { EditeducacionComponent } from './components/educacion/editeducacion.component';
-import { NeweducacionComponent } from './components/educacion/neweducacion.component';
-import { EditExperienciaComponent } from './components/experiencia/edit-experiencia.component';
-import { NewExperienciaComponent } from './components/experiencia/new-experiencia.component';
+import { EditeducacionComponent } from './components/educacion/editeducacion/editeducacion.component';
+import { NeweducacionComponent } from './components/educacion/neweducacion/neweducacion.component';
+import { EditExperienciaComponent } from './components/experiencia/edit-experiencia/edit-experiencia.component';
+import { NewExperienciaComponent } from './components/experiencia/new-experiencia/new-experiencia.component';
 import { HomeComponent } from './components/home/home.component';
-import { EditSkillComponent } from './components/hys/edit-skill.component';
-import { NewSkillComponent } from './components/hys/new-skill.component';
+import { EditSkillComponent } from './components/hys/edit-skill/edit-skill.component';
+import { NewSkillComponent } from './components/hys/new-skill/new-skill.component';
 import { LoginComponent } from './components/login/login.component';
 
 const routes: Routes = [
